@@ -29,8 +29,7 @@
         </Border.Background>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="337*"/>
-                <ColumnDefinition Width="13*"/>
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
@@ -137,7 +136,7 @@
                 </StackPanel>
                 <!--Pantalla-->
                 <Grid Grid.Row="1">
-                    <TextBox x:Name="btnResultado"
+                    <TextBox x:Name="txtResultado"
                              Text="0"
                              Margin="5"
                              HorizontalContentAlignment="Right"
@@ -166,7 +165,7 @@
                         FontFamily="Montserrat"
                         Cursor="Hand"
                         Grid.Column="0"
-                        Click="btnBorrarTodo_Click">
+                        Click="VaciarVariable">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -199,7 +198,7 @@
                         FontFamily="Montserrat"
                         Cursor="Hand"
                         Grid.Column="1"
-                        Click="btnBorrar_Click">
+                        Click="btnBorrarTodo_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -232,7 +231,7 @@
                         FontFamily="Montserrat"
                         Cursor="Hand"
                         Grid.Column="2"
-                        Click="btnBorrarTodo_Click">
+                        Click="btnBorrarUno_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -265,7 +264,7 @@
                         FontFamily="Montserrat"
                         Cursor="Hand"
                         Grid.Column="3"
-                        Click="btnBorrarTodo_Click">
+                        Click="btnInvertir_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -315,7 +314,7 @@
                         Cursor="Hand"
                         Grid.Column="0"
                         Grid.Row="0"
-                        Click="btnBorrarTodo_Click">
+                        Click="AgregarNumero_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -349,7 +348,7 @@
                         Cursor="Hand"
                         Grid.Column="1"
                         Grid.Row="0"
-                        Click="btnBorrarTodo_Click">
+                        Click="AgregarNumero_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -383,7 +382,7 @@
                         Cursor="Hand"
                         Grid.Column="2"
                         Grid.Row="0"
-                        Click="btnBorrarTodo_Click">
+                        Click="AgregarNumero_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -417,7 +416,7 @@
                         Cursor="Hand"
                         Grid.Column="0"
                         Grid.Row="1"
-                        Click="btnBorrarTodo_Click">
+                        Click="AgregarNumero_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -451,7 +450,7 @@
                         Cursor="Hand"
                         Grid.Column="1"
                         Grid.Row="1"
-                        Click="btnBorrarTodo_Click">
+                        Click="AgregarNumero_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -485,7 +484,7 @@
                         Cursor="Hand"
                         Grid.Column="2"
                         Grid.Row="1"
-                        Click="btnBorrarTodo_Click">
+                        Click="AgregarNumero_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -519,7 +518,7 @@
                         Cursor="Hand"
                         Grid.Column="0"
                         Grid.Row="2"
-                        Click="btnBorrarTodo_Click">
+                        Click="AgregarNumero_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -553,7 +552,7 @@
                         Cursor="Hand"
                         Grid.Column="1"
                         Grid.Row="2"
-                        Click="btnBorrarTodo_Click">
+                        Click="AgregarNumero_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -587,7 +586,7 @@
                         Cursor="Hand"
                         Grid.Column="2"
                         Grid.Row="2"
-                        Click="btnBorrarTodo_Click">
+                        Click="AgregarNumero_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -621,7 +620,7 @@
                         Cursor="Hand"
                         Grid.Column="1"
                         Grid.Row="3"
-                        Click="btnBorrarTodo_Click">
+                        Click="AgregarNumero_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -655,7 +654,7 @@
                         Cursor="Hand"
                         Grid.Column="0"
                         Grid.Row="3"
-                        Click="btnBorrarTodo_Click">
+                        Click="btnPunto_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -723,7 +722,8 @@
                         Cursor="Hand"
                         Grid.Column="3"
                         Grid.Row="0"
-                        Click="btnBorrarTodo_Click">
+                        Click="Operador_Click" 
+                        Tag="+">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -757,7 +757,8 @@
                         Cursor="Hand"
                         Grid.Column="4"
                         Grid.Row="0"
-                        Click="btnBorrarTodo_Click">
+                        Click="Operador_Click" 
+                        Tag="-">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -791,7 +792,8 @@
                         Cursor="Hand"
                         Grid.Column="3"
                         Grid.Row="1"
-                        Click="btnBorrarTodo_Click">
+                        Click="Operador_Click" 
+                        Tag="x">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -825,7 +827,8 @@
                         Cursor="Hand"
                         Grid.Column="4"
                         Grid.Row="1"
-                        Click="btnBorrarTodo_Click">
+                        Click="Operador_Click" 
+                        Tag="/">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -859,7 +862,8 @@
                         Cursor="Hand"
                         Grid.Column="3"
                         Grid.Row="2"
-                        Click="btnBorrarTodo_Click">
+                        Click="Operador_Click" 
+                        Tag="²">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -893,7 +897,8 @@
                         Cursor="Hand"
                         Grid.Column="4"
                         Grid.Row="2"
-                        Click="btnBorrarTodo_Click">
+                        Click="Operador_Click" 
+                        Tag="√">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -928,7 +933,7 @@
                         Grid.Column="3"
                         Grid.ColumnSpan="4"
                         Grid.Row="3"
-                        Click="btnBorrarTodo_Click">
+                        Click="btnIgual_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
