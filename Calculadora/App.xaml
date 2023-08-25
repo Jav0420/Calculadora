@@ -4,6 +4,56 @@
              xmlns:local="clr-namespace:Calculadora"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!--Numeros-->
+        <Style x:Key="EstiloNumeros" TargetType="Button">
+            <Setter Property="Background" Value="#20798B"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#5aa35a"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <!--Operadores-->
+        <Style x:Key="EstiloOperadores" TargetType="Button">
+            <Setter Property="Background" Value="#1D6BB2"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#81e9e6"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <!--Operadores-->
+        <Style x:Key="EstiloOpciones" TargetType="Button">
+            <Setter Property="Background" Value="#071952"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#20798B"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+        <ControlTemplate x:Key="BordeOpciones" TargetType="Button">
+            <Border Width="70" Height="25"
+                    CornerRadius="9"
+                    Background="{TemplateBinding Background}">
+                <ContentPresenter VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+
+
+        <!--Bordes-->
+        <ControlTemplate x:Key="Borde" TargetType="Button">
+            <Border Width="50" Height="50"
+                    CornerRadius="27"
+                    Background="{TemplateBinding Background}">
+                <ContentPresenter VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
          
     </Application.Resources>
 </Application>

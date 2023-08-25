@@ -17,14 +17,14 @@
         <Border.BorderBrush>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                 <GradientStop Color="#085567" Offset="0"/>
-                <GradientStop Color="#20798B" Offset="0.5"/>
-                <GradientStop Color="#001E2C" Offset="1"/>
+                <GradientStop Color="#20798B" Offset="1"/>
+                <GradientStop Color="#67e467" Offset="0.5"/>
             </LinearGradientBrush>
         </Border.BorderBrush>
         <Border.Background>
-            <LinearGradientBrush StartPoint="0,0.1" EndPoint="1,0.18">
+            <LinearGradientBrush StartPoint="0,0.25" EndPoint="1,1">
                 <GradientStop Color="#35A29F" Offset="1"/>
-                <GradientStop Color="#97FEED" Offset="0.1"/>
+                <GradientStop Color="#81e981" Offset="0"/>
             </LinearGradientBrush>
         </Border.Background>
         <Grid>
@@ -158,6 +158,8 @@
                     </Grid.ColumnDefinitions>
                     
                     <Button x:Name="btnBorrarTodo"
+                        Style="{StaticResource EstiloOpciones}"
+                        Template="{StaticResource BordeOpciones}"
                         BorderThickness="0"
                         Content="CE"
                         Foreground="White"
@@ -166,31 +168,11 @@
                         Cursor="Hand"
                         Grid.Column="0"
                         Click="VaciarVariable">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#071952"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#20798B"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="70" Height="25"
-                                    CornerRadius="9"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
                     
                     <Button x:Name="btnBorrar"
+                        Style="{StaticResource EstiloOpciones}"
+                        Template="{StaticResource BordeOpciones}"
                         BorderThickness="0"
                         Content="C"
                         Foreground="White"
@@ -199,31 +181,11 @@
                         Cursor="Hand"
                         Grid.Column="1"
                         Click="btnBorrarTodo_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#071952"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#20798B"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="70" Height="25"
-                                    CornerRadius="9"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btnBorrarUno"
+                        Style="{StaticResource EstiloOpciones}"
+                        Template="{StaticResource BordeOpciones}"
                         BorderThickness="0"
                         Content="--"
                         Foreground="White"
@@ -232,31 +194,11 @@
                         Cursor="Hand"
                         Grid.Column="2"
                         Click="btnBorrarUno_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#071952"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#20798B"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="70" Height="25"
-                                    CornerRadius="9"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btnInvertir"
+                        Style="{StaticResource EstiloOpciones}"
+                        Template="{StaticResource BordeOpciones}"
                         BorderThickness="0"
                         Content="+/-"
                         Foreground="White"
@@ -265,28 +207,6 @@
                         Cursor="Hand"
                         Grid.Column="3"
                         Click="btnInvertir_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#071952"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#20798B"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="70" Height="25"
-                                    CornerRadius="9"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
                 </Grid>
                 <!--Numeros y signos -->
@@ -306,6 +226,8 @@
                     </Grid.ColumnDefinitions>
                     <!--Numeros-->
                     <Button x:Name="btn1"
+                        Style="{StaticResource EstiloNumeros}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="1"
                         Foreground="White"
@@ -315,31 +237,11 @@
                         Grid.Column="0"
                         Grid.Row="0"
                         Click="AgregarNumero_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btn2"
+                        Style="{StaticResource EstiloNumeros}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="2"
                         Foreground="White"
@@ -349,31 +251,11 @@
                         Grid.Column="1"
                         Grid.Row="0"
                         Click="AgregarNumero_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btn3"
+                        Style="{StaticResource EstiloNumeros}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="3"
                         Foreground="White"
@@ -383,31 +265,11 @@
                         Grid.Column="2"
                         Grid.Row="0"
                         Click="AgregarNumero_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btn4"
+                        Style="{StaticResource EstiloNumeros}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="4"
                         Foreground="White"
@@ -417,31 +279,11 @@
                         Grid.Column="0"
                         Grid.Row="1"
                         Click="AgregarNumero_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btn5"
+                        Style="{StaticResource EstiloNumeros}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="5"
                         Foreground="White"
@@ -451,31 +293,11 @@
                         Grid.Column="1"
                         Grid.Row="1"
                         Click="AgregarNumero_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btn6"
+                        Style="{StaticResource EstiloNumeros}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="6"
                         Foreground="White"
@@ -485,31 +307,11 @@
                         Grid.Column="2"
                         Grid.Row="1"
                         Click="AgregarNumero_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btn7"
+                        Style="{StaticResource EstiloNumeros}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="7"
                         Foreground="White"
@@ -519,31 +321,11 @@
                         Grid.Column="0"
                         Grid.Row="2"
                         Click="AgregarNumero_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btn8"
+                        Style="{StaticResource EstiloNumeros}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="8"
                         Foreground="White"
@@ -553,31 +335,11 @@
                         Grid.Column="1"
                         Grid.Row="2"
                         Click="AgregarNumero_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btn9"
+                        Style="{StaticResource EstiloNumeros}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="9"
                         Foreground="White"
@@ -587,31 +349,11 @@
                         Grid.Column="2"
                         Grid.Row="2"
                         Click="AgregarNumero_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btn0"
+                        Style="{StaticResource EstiloNumeros}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="0"
                         Foreground="White"
@@ -621,31 +363,11 @@
                         Grid.Column="1"
                         Grid.Row="3"
                         Click="AgregarNumero_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
                     <!--Operdores-->
                     <Button x:Name="btnPunto"
+                        Style="{StaticResource EstiloOperadores}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="."
                         Foreground="White"
@@ -655,31 +377,11 @@
                         Grid.Column="0"
                         Grid.Row="3"
                         Click="btnPunto_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btnPorciento"
+                        Style="{StaticResource EstiloOperadores}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="%"
                         Foreground="White"
@@ -689,31 +391,11 @@
                         Grid.Column="2"
                         Grid.Row="3"
                         Click="btnBorrarTodo_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btnSuma"
+                        Style="{StaticResource EstiloOperadores}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="+"
                         Foreground="White"
@@ -724,31 +406,11 @@
                         Grid.Row="0"
                         Click="Operador_Click" 
                         Tag="+">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btnResta"
+                        Style="{StaticResource EstiloOperadores}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="-"
                         Foreground="White"
@@ -759,31 +421,11 @@
                         Grid.Row="0"
                         Click="Operador_Click" 
                         Tag="-">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btnMulti"
+                        Style="{StaticResource EstiloOperadores}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="x"
                         Foreground="White"
@@ -794,31 +436,11 @@
                         Grid.Row="1"
                         Click="Operador_Click" 
                         Tag="x">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btnDiv"
+                        Style="{StaticResource EstiloOperadores}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="/"
                         Foreground="White"
@@ -829,31 +451,11 @@
                         Grid.Row="1"
                         Click="Operador_Click" 
                         Tag="/">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btnPotencia"
+                        Style="{StaticResource EstiloOperadores}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="x²"
                         Foreground="White"
@@ -864,31 +466,11 @@
                         Grid.Row="2"
                         Click="Operador_Click" 
                         Tag="²">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
 
                     <Button x:Name="btnRaiz"
+                        Style="{StaticResource EstiloOperadores}"
+                        Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="√x"
                         Foreground="White"
@@ -899,32 +481,10 @@
                         Grid.Row="2"
                         Click="Operador_Click" 
                         Tag="√">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="50" Height="50"
-                                    CornerRadius="27"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
                     </Button>
                     <!--igual-->
                     <Button x:Name="btnIgual"
-                        BorderThickness="0"
+                        BorderThickness="50"
                         Content="="
                         Foreground="White"
                         FontSize="45"
@@ -941,6 +501,7 @@
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="BorderBrush" Value="Black"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
