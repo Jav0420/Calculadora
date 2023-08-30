@@ -6,37 +6,130 @@
     <Application.Resources>
         <!--Numeros-->
         <Style x:Key="EstiloNumeros" TargetType="Button">
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="FontSize" Value="40"/>
             <Setter Property="Background" Value="#20798B"/>
+            <Setter Property="Foreground" Value="White"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#5aa35a"/>
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="60"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="60"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="50"
+                                                 Duration="0:0:0.4" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="50"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="50"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="40"
+                                                 Duration="0:0:0.4" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
                 </Trigger>
             </Style.Triggers>
         </Style>
         
         <!--Operadores-->
         <Style x:Key="EstiloOperadores" TargetType="Button">
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="FontSize" Value="40"/>
             <Setter Property="Background" Value="#1D6BB2"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#81e9e6"/>
+                    <Setter Property="Background" Value="#db812a"/>
                 </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="60"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="60"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="50"
+                                                 Duration="0:0:0.4" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="50"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="50"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="40"
+                                                 Duration="0:0:0.4" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+
             </Style.Triggers>
         </Style>
         
         <!--Operadores-->
         <Style x:Key="EstiloOpciones" TargetType="Button">
             <Setter Property="Background" Value="#071952"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="White"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#20798B"/>
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="#071952"/>
                 </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="75"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="30"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="23"
+                                                 Duration="0:0:0.4" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="70"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="25"
+                                                 Duration="0:0:0.3" />
+                                <DoubleAnimation Storyboard.TargetProperty="FontSize" To="16"
+                                                 Duration="0:0:0.4" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+
             </Style.Triggers>
         </Style>
 
 
         <ControlTemplate x:Key="BordeOpciones" TargetType="Button">
-            <Border Width="70" Height="25"
+            <Border 
                     CornerRadius="9"
                     Background="{TemplateBinding Background}">
                 <ContentPresenter VerticalAlignment="Center"
@@ -47,7 +140,7 @@
 
         <!--Bordes-->
         <ControlTemplate x:Key="Borde" TargetType="Button">
-            <Border Width="50" Height="50"
+            <Border 
                     CornerRadius="27"
                     Background="{TemplateBinding Background}">
                 <ContentPresenter VerticalAlignment="Center"

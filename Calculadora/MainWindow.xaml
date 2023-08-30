@@ -162,8 +162,6 @@
                         Template="{StaticResource BordeOpciones}"
                         BorderThickness="0"
                         Content="CE"
-                        Foreground="White"
-                        FontSize="16"
                         FontFamily="Montserrat"
                         Cursor="Hand"
                         Grid.Column="0"
@@ -175,8 +173,6 @@
                         Template="{StaticResource BordeOpciones}"
                         BorderThickness="0"
                         Content="C"
-                        Foreground="White"
-                        FontSize="16"
                         FontFamily="Montserrat"
                         Cursor="Hand"
                         Grid.Column="1"
@@ -188,8 +184,6 @@
                         Template="{StaticResource BordeOpciones}"
                         BorderThickness="0"
                         Content="--"
-                        Foreground="White"
-                        FontSize="16"
                         FontFamily="Montserrat"
                         Cursor="Hand"
                         Grid.Column="2"
@@ -201,8 +195,6 @@
                         Template="{StaticResource BordeOpciones}"
                         BorderThickness="0"
                         Content="+/-"
-                        Foreground="White"
-                        FontSize="16"
                         FontFamily="Montserrat"
                         Cursor="Hand"
                         Grid.Column="3"
@@ -230,7 +222,6 @@
                         Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="1"
-                        Foreground="White"
                         FontSize="40"
                         FontFamily="Montserrat"
                         Cursor="Hand"
@@ -244,7 +235,6 @@
                         Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="2"
-                        Foreground="White"
                         FontSize="40"
                         FontFamily="Montserrat"
                         Cursor="Hand"
@@ -258,7 +248,6 @@
                         Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="3"
-                        Foreground="White"
                         FontSize="40"
                         FontFamily="Montserrat"
                         Cursor="Hand"
@@ -272,7 +261,6 @@
                         Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="4"
-                        Foreground="White"
                         FontSize="40"
                         FontFamily="Montserrat"
                         Cursor="Hand"
@@ -286,7 +274,6 @@
                         Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="5"
-                        Foreground="White"
                         FontSize="40"
                         FontFamily="Montserrat"
                         Cursor="Hand"
@@ -300,7 +287,6 @@
                         Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="6"
-                        Foreground="White"
                         FontSize="40"
                         FontFamily="Montserrat"
                         Cursor="Hand"
@@ -314,7 +300,6 @@
                         Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="7"
-                        Foreground="White"
                         FontSize="40"
                         FontFamily="Montserrat"
                         Cursor="Hand"
@@ -328,7 +313,6 @@
                         Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="8"
-                        Foreground="White"
                         FontSize="40"
                         FontFamily="Montserrat"
                         Cursor="Hand"
@@ -342,7 +326,6 @@
                         Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="9"
-                        Foreground="White"
                         FontSize="40"
                         FontFamily="Montserrat"
                         Cursor="Hand"
@@ -356,7 +339,6 @@
                         Template="{StaticResource Borde}"
                         BorderThickness="0"
                         Content="0"
-                        Foreground="White"
                         FontSize="40"
                         FontFamily="Montserrat"
                         Cursor="Hand"
@@ -497,11 +479,40 @@
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#20798B"/>
+                                <Setter Property="Background" Value="#208b2b"/>
+                                <Setter Property="Height" Value="50"/>
+                                <Setter Property="Width" Value="90"/>
+                                <Setter Property="FontSize" Value="40"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="Background" Value="#16611e"/>
                                         <Setter Property="BorderBrush" Value="Black"/>
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Trigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetProperty="Width" To="100"
+                                                 Duration="0:0:0.2" />
+                                                    <DoubleAnimation Storyboard.TargetProperty="Height" To="60"
+                                                 Duration="0:0:0.3" />
+                                                    <DoubleAnimation Storyboard.TargetProperty="FontSize" To="50"
+                                                 Duration="0:0:0.4" />
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.EnterActions>
+                                        <Trigger.ExitActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetProperty="Width" To="90"
+                                                 Duration="0:0:0.2 " />
+                                                    <DoubleAnimation Storyboard.TargetProperty="Height" To="50"
+                                                 Duration="0:0:0.3" />
+                                                    <DoubleAnimation Storyboard.TargetProperty="FontSize" To="40"
+                                                 Duration="0:0:0.4" />
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.ExitActions>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -509,7 +520,7 @@
 
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
-                                <Border Width="90" Height="50"
+                                <Border 
                                     CornerRadius="27"
                                     Background="{TemplateBinding Background}">
                                     <ContentPresenter VerticalAlignment="Center"
@@ -518,10 +529,10 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-
                 </Grid>
             </Grid>
         </Grid>
+        
     </Border>
 
 </Window>
